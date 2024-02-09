@@ -84,11 +84,6 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
-                    {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
-                    }
                 }
             }
         }
@@ -209,7 +204,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:processa-nf-setup"
         "ProductCode" = "8:{EBB30BAA-7A85-4D56-81B7-D50044FEA056}"
-        "PackageCode" = "8:{EE1FD14D-34AD-4D2E-929A-E217166B15DB}"
+        "PackageCode" = "8:{BB025709-D5C8-407B-9290-AEBDBDDFA121}"
         "UpgradeCode" = "8:{98DDD9D2-B32A-4B27-AB4A-C60ACB2F96C9}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

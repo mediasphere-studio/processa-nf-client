@@ -54,9 +54,12 @@ namespace processa_nf_service
                             {
                                 string retornoAPI = await ProcessaRequisicaoAPI(message, mimePart);
 
+                                retornoAPI = retornoAPI
+                                    .Replace("\"origem\":null,", $"\"origem\":\"{contaEmail.Usuario}\",")
+                                    .Replace("\"dataRecebimento\":null,", $"\"dataRecebimento\":\"{message.Date.LocalDateTime:O}\",");
+
                                 if (!string.IsNullOrEmpty(contaEmail.EnderecoAPI))
                                     await ProcessaCallback(contaEmail, retornoAPI);
-
                             }
                         }
                     }
@@ -91,7 +94,7 @@ namespace processa_nf_service
             using var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, contaEmail.EnderecoAPI);
 
-            if (!string.IsNullOrEmpty(contaEmail.CabecalhoAutorizacao) )
+            if (!string.IsNullOrEmpty(contaEmail.CabecalhoAutorizacao))
             {
                 request.Headers.Add("Authorization", contaEmail.CabecalhoAutorizacao);
             }
